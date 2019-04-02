@@ -1,9 +1,11 @@
+import os
 from src.parsers import (kivano_parser, mistore_parser, myphone_parser, 
 ostore_parser, softech_parser, svetofor_parser, beeshop_parser, mostovoy_parser)
 
 MAX_ARCHIVE_DAYS = 31
 COMPARE_RESULT_NAME = "result.xlsx"
-DATA_FOLDER = "../../data/"
+DATA_FOLDER = os.path.abspath(__file__+ "../../../../data") + '/'
+print(DATA_FOLDER)
 PARSERS = {
     "kivano.kg": kivano_parser,
     "mistore.kg": mistore_parser,
